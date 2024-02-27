@@ -1,0 +1,6 @@
+*.csv
+*.log
+*.pyc
+*.json
+*.xml
+.DS_store
