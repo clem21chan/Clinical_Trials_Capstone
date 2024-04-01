@@ -1,7 +1,7 @@
 # Capstone Project: Predicting Clinical Trial Terminations
 Clement Chan, Data Science Diploma Program @BrainStation
 
-Date: 2024/03/03
+Date: 2024/03/30
 
 Dataset link: https://clinicaltrials.gov/
 
@@ -18,17 +18,13 @@ Many large pharmaceutical companies, investors, and other research entities woul
 ### Proposed Data Science Solution
 
 1. Data Wrangling/Exploration: Exploring and understanding the dataset which includes data cleaning, feature selection, and preprocessing.
-2. Data Analysis: Using statistics, distributions, and regression models to determine the key features that affect the termination of clinical trials.
-3. Predictive Modeling: Using NLP and Word embedding to group keywords in the brief summary together for a more accurate model.
+2. Data Preprocessing: Using statistics, distributions, and regression models to determine the key features that affect the termination of clinical trials.
+3. Predictive Modeling: Using NLP and Word embedding to identify keywords in the brief summary together for a more accurate model.
 
 ### Impact of the Solution
 
 By creating this analysis and model, we can potentially save millions of dollars in funding by sponsors, investors, and the government. Additionally, by helping medical companies better understand the factors that cause clinical trial failures, we can improve the design of clinical trials and prevent loss of scientific advancements in medicine.
 
-### What to expect for the next sprint:
-- Start grouping unique values together in categorical columns using NLP
-- Create dummy variables and perform chi-squared tests, logistic regression modelling, and understanding what p-values are significant.
-- Start formulating hypothesis for further modelling.
 
 ### Data Dictionary based on clinicaltrials.gov:
 
@@ -57,3 +53,45 @@ By creating this analysis and model, we can potentially save millions of dollars
 | Primary Completion Date | Date the final participant was examined for the first outcome | datetime |
 | Completion Date | Date the final participant was examined | datetime |
 | Locations | Where the clinical study will be held | object |
+
+## Flowchart
+1. **Data Collection:**
+    - Retrieve dataset from clinicaltrials.gov
+2. **Data Preprocessing:**
+    - Handle missing values
+    - Analyze data quality, data type, issues, etc.
+    - Selecting important features/feature engineering
+3. **Exploratory Data Analysis:**
+    - Evaluate distributions of important variables
+    - Visualize patterns and important issues to address
+    - Formulate questions and find hidden information within the dataset
+4. **Baseline Modelling:**
+    - Linear regression, decision tree
+    - Evaluate model using confusion matrix and classification reports
+5. **Advanced Modelling:**
+    - Ensemble learning (Random Forest)
+    - Gradient Boosting
+    - Word Embedding + neural networks
+    - Hyperparameter fine tuning
+
+## Repository Navigation
+
+### Notebooks
+**1_DataWrangling:**
+- Initial look into dataset
+- Cleaning missing values and analyzing distributions
+- Preliminary EDA and creating workflow
+
+**2_Preprocessing&EDA:**
+- Indepth cleaning of tabular columns
+- Created dummy variables and prepared data for baseline model
+- More comprehensive EDA of the targeted variable `Study Status`
+
+**3_BaselineModelling:**
+- Logistic Regression of tabular variables
+- Confusion Matrix: Precision, Recall, and F1 score analysis
+- Text Data preprocessing + Baseline Model
+
+## What to expect for the next sprint:
+- Deal with massive data imbalance by random desampling the completed trials.
+- Perform ensemble learning and word embedding for better predictions.
