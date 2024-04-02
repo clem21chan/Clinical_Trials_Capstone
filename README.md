@@ -66,8 +66,9 @@ By creating this analysis and model, we can potentially save millions of dollars
     - Visualize patterns and important issues to address
     - Formulate questions and find hidden information within the dataset
 4. **Baseline Modelling:**
-    - Linear regression, decision tree
+    - Logistic regression, decision tree
     - Evaluate model using confusion matrix and classification reports
+    - Preprocessing Text data
 5. **Advanced Modelling:**
     - Ensemble learning (Random Forest)
     - Gradient Boosting
