@@ -1,7 +1,7 @@
 # Capstone Project: Predicting Clinical Trial Terminations
 **Author:** Clement Chan
 
-Date: 2024/03/30
+Date: 2024/04/15
 
 Dataset link: https://clinicaltrials.gov/
 
@@ -27,8 +27,6 @@ The main goal of this project is to first discover the primary factors associate
 ### Impact of the Solution
 
 By creating this analysis and model, we can save up to 50 million USD per trial in funding by sponsors, investors, and the government. Additionally, by helping medical companies better understand the factors that cause clinical trial failures, we can improve the design of clinical trials and prevent loss of scientific advancements in medicine.
-
-### Summary of the Project
 
 ## 2. Data Information
 
@@ -99,8 +97,21 @@ The dataset was retrieved from [ClinicalTrials.gov](https://clinicaltrials.gov/)
 - Text Data preprocessing + Baseline Model
 
 **3.1_AdditionalTextPreprocessing:**
-- 
+- Preprocessed the `Sponsor`, `Collaborators`, `Conditions`, and `Primary Outcome Measures` text columns.
+- Fitted each to the LogisticRegression baseline model
+- Evaluated Coefficients, insights, and model scores
 
-## What to expect for the next sprint:
-- Deal with massive data imbalance by random desampling the completed trials.
-- Perform ensemble learning and word embedding for better predictions.
+**4.0_AdvancedModelling_Ensemble:**
+- Fit a decision tree baseline
+- Optimized Random Forest Classification
+- HyperParameter Fine-tuned Random Forest Classfier
+- Evaluated accuracy, f1_score, roc_auc_score
+
+**4.1_AdvModel_WordEmbedding:**
+- Utilised BioClinicalBERT tokenizer and model
+- Preprocessed `Study Title` text column
+- Fine-tuned to pretrain model for Transfer Learning
+- Sample testing
+
+## 5. Setup
+I've included all the appropriate packages needed to be installed in the environment file `Clinical_Trial_env.yml`
