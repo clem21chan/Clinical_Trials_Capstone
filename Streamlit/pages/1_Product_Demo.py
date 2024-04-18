@@ -14,10 +14,10 @@ st.set_page_config(
 )
 
 # Sidebar
-st.sidebar.header('Data Visualization')
+st.sidebar.header('Product Demo')
 
 #################### Data Visualization ##################
-st.title('Data Visualization')
+st.title('Product Demo')
 
 @st.cache_data # Used to cache the results of the functions to optimize performance
 
@@ -38,6 +38,8 @@ st.dataframe(clean_df.head(5))
 
 ######## Graph 1: Clinical Trial Termination Based on Enrollment Number #######
 # manually sort the categories
+st.markdown("## Data Visualization")
+st.markdown("### Chart 1:")
 graph1 = load_data('enrollment_trial_status.csv')
 
 # creating the bar graph
@@ -51,8 +53,12 @@ fig1.update_layout(
 
 st.plotly_chart(fig1)
 
-### Graph 2: Study Title Coefficients that lead to a terminated trial ###
-st.markdown('Coef??')
+st.markdown('**Insights:**\
+            \n - As the number of participants in a study **decreases**, trial termination **increases.**\
+            \n - Potential Reasons: High requirements, no interest, lack of funding, etc.')
+
+####### Graph 2: Study Title Coefficients that lead to a terminated trial #######
+st.markdown("### Chart 2:")
 # Load the data
 cond_coef = load_data('top_cond_coef.csv')
 # Clean up the labels
@@ -82,12 +88,18 @@ fig2.update_layout(
 
 st.plotly_chart(fig2)
 
+st.markdown('**Insights:**\
+            \n - Greater the coefficient the more likely the word is associated with trial termination.\
+            \n - **Chronic Conditions** such as Crohn disease, Parkinson, cancer etc. seem to have the greatest impact on trial termination.\
+            \n - [Studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8164884/) in 2021 found that **19%** of Covid related trials\
+             were terminated due to enrollment difficulties and less people with covid cases.')
+
 
 ###################### MODELLING #################
-st.title('ML Modelling')
+st.title('ML Modelling - Neural Networks')
 
 ## Word Embedded Transfer Learning Model ##
-st.header('Transfer Learning using Bio_ClinicalBERT')
+st.markdown('### Transfer Learning using Bio_ClinicalBERT')
 # Create expected IDs and their labels
 id2label = {0: "COMPLETED", 1: "TERMINATED"}
 label2id = {"COMPLETED": 0, "TERMINATED": 1}
@@ -115,3 +127,8 @@ score = output[0]["score"]
 
 # prediction return
 st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
+
+st.image('images/clinicalbert.png')
+st.markdown('**What is [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)?**\
+            \n - Trained by Emily Alsentzer with over millions of downloads.\
+            \n - **HuggingFace Transformer** that was trained on PubMed and MIMIC III dataset.')
