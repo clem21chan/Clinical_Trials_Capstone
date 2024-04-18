@@ -5,54 +5,40 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+# huggingface/transformers
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, TextClassificationPipeline
 
 st.set_page_config(
-    page_title='Data Visualization',
-    page_icon='📈'
+    page_title='Product Demo',
+    page_icon='💻'
 )
 
-# Main Page
+# Sidebar
+st.sidebar.header('Data Visualization')
+
+#################### Data Visualization ##################
 st.title('Data Visualization')
 
 @st.cache_data # Used to cache the results of the functions to optimize performance
 
 # Create a data loading function
 def load_data(path):
-    # load clean dataset
-    df = pd.read_csv(path, index_col=0)
+    df = pd.read_csv(path, nrows=100, index_col=0)
 
     return df
 
-# Load clean dataset
+# Load clean dataframe
 clean_df = load_data('../Notebooks/clean_ctg.csv')
 
 # Display dataframe
-st.dataframe(clean_df.head())
+st.header('Peek at the dataset:')
+st.markdown('[ClinicalTrials](https://clinicaltrials.gov/) Dataset')
+st.dataframe(clean_df.head(5))
 
-## Graph 1: Clinical Trial Termination Based on Enrollment Number ##
+
+######## Graph 1: Clinical Trial Termination Based on Enrollment Number #######
 # manually sort the categories
-enrollment_categories = ['0-8','9-19','20-29','30-41','42-59','60-79','80-119','120-209','210-490','491-188814085']
-clean_df['Enrollment'] = pd.Categorical(clean_df['Enrollment'], enrollment_categories)
-
-# slice out completed and terminated rows
-completed = clean_df['Study Status'] == 0
-terminated = clean_df['Study Status'] == 1
-
-# Count the rows of completed and terminated
-completed_counts = clean_df[completed].groupby('Enrollment')['Study Status'].count().rename({'491-188814085' : '491-200000000'}) # rename to cleanup the label
-terminated_counts = clean_df[terminated].groupby('Enrollment')['Study Status'].count().rename({'491-188814085' : '491-200000000'})
-
-# total counts
-total_counts = clean_df.groupby('Enrollment')['Enrollment'].count().rename({'491-188814085' : '491-200000000'})
-
-# completed ratio df
-comp_ratio = pd.DataFrame((completed_counts / total_counts)*100).rename(columns={0:'Completed'})
-
-# terminated ratio df
-term_ratio = pd.DataFrame((terminated_counts / total_counts)*100).rename(columns={0:'Terminated'})
-
-# Concat df
-graph1 = pd.concat([term_ratio, comp_ratio], axis=1)
+graph1 = load_data('enrollment_trial_status.csv')
 
 # creating the bar graph
 fig1 = px.bar(graph1, orientation='h', color_discrete_sequence=['#f35c6e', '#686ee2'])
@@ -65,6 +51,67 @@ fig1.update_layout(
 
 st.plotly_chart(fig1)
 
-# Sidebar
-st.sidebar.header('Data Visualization')
+### Graph 2: Study Title Coefficients that lead to a terminated trial ###
+st.markdown('Coef??')
+# Load the data
+cond_coef = load_data('top_cond_coef.csv')
+# Clean up the labels
+labels = {
+    'Condition_end stage':'end stage',
+    'Condition_crohn disease':'crohn disease',
+    'Condition_parkinson':'parkinson',
+    'Condition_19':'covid 19',
+    'Condition_prostate':'prostate',
+    'Condition_fibrillation':'fibrillation',
+    'Condition_macular degeneration':'macular degeneration',
+    'Condition_cancer':'cancer',
+    'Condition_sleep apnea':'sleep apnea',
+    'Condition_cystic fibrosis':'cystic fibrosis'
+}
+cond_coef = cond_coef.rename(labels)
 
+# Creating the plotly figure
+fig2 = px.bar(cond_coef.head(10),color_discrete_sequence=['#f35c6e'])
+
+fig2.update_layout(
+    title="Top 10 Study Condition Coefficients That Lead to a Trial Termination",
+    yaxis_title="Logistic Regression Coefficient",
+    xaxis_title="Study Condition Words",
+    showlegend=False
+)
+
+st.plotly_chart(fig2)
+
+
+###################### MODELLING #################
+st.title('ML Modelling')
+
+## Word Embedded Transfer Learning Model ##
+st.header('Transfer Learning using Bio_ClinicalBERT')
+# Create expected IDs and their labels
+id2label = {0: "COMPLETED", 1: "TERMINATED"}
+label2id = {"COMPLETED": 0, "TERMINATED": 1}
+
+# Load model
+model = AutoModelForSequenceClassification.from_pretrained(
+    "../Notebooks/models/TransferModel_v2",
+    num_labels=2,
+    id2label=id2label,
+    label2id=label2id)
+
+# Load tokenizer
+tokenizer = AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+
+# textbox
+text = st.text_input('Fine-Tuned Bio_ClinicalBERT Model', 'Phase 2 Study of JK07 in Chronic Heart Failure (RENEU-HF)')
+
+# text predictions using a pipe
+pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer, device='cpu')
+output = pipe(text)
+
+# Extract label and score
+label = output[0]["label"]
+score = output[0]["score"]
+
+# prediction return
+st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
