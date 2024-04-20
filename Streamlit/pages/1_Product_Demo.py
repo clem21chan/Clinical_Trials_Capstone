@@ -32,7 +32,7 @@ clean_df = load_data('./Streamlit/sample_dataset.csv')
 
 # Display dataframe
 st.header('Peek at the dataset:')
-st.markdown('[ClinicalTrials](https://clinicaltrials.gov/) Dataset')
+st.markdown('[ClinicalTrials.gov](https://clinicaltrials.gov/) Dataset')
 st.dataframe(clean_df.head(5))
 
 
@@ -94,10 +94,14 @@ st.markdown('**Insights:**\
 
 
 ###################### MODELLING #################
-st.title('ML Modelling - Neural Networks')
+st.title('ML Modelling - Demo')
 
 ## Word Embedded Transfer Learning Model ##
-st.markdown('### Transfer Learning using Bio_ClinicalBERT')
+st.markdown('### Transfer Learning using Bio_ClinicalBERT\
+            \n Feel free to input a clinical study title or any study topic (Ex. Cancer, Diabetes, etc.) to analyze how the model \
+            would predict `Completed` or `Terminated` based on similar trials in the past.\
+            \n - **Classifcation:** The study will be COMPLETED or the study will be TERMINATED\
+            \n - **Confidence_Score:** How confident the model is in classifying the study topic from 0 to 1. (0 being bad, 0.5 being okay, and 1 being perfect).')
 # Create expected IDs and their labels
 id2label = {0: "COMPLETED", 1: "TERMINATED"}
 label2id = {"COMPLETED": 0, "TERMINATED": 1}
@@ -126,7 +130,25 @@ score = output[0]["score"]
 # prediction return
 st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
 
+# Important Notes on model
+st.markdown("**Important Notes:**\
+            \n - Due to the lack of computing resources, the pretrained model was only fine-tuned\
+            on the `Study Title`.\
+            \n - For a more accurate classification model that was trained on the entire dataset, \
+            be sure to check out the RandomForest model on [Github](https://github.com/clem21chan/Clinical_Trials_Capstone)")
+
 # st.image('.Streamlit/clinicalbert.png')
 st.markdown('**What is [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)?**\
             \n - Trained by Emily Alsentzer with over millions of downloads.\
             \n - **HuggingFace Transformer** that was trained on PubMed and MIMIC III dataset.')
+
+# add line
+st.markdown('---')
+
+st.markdown('### Next Steps:\
+            \n - Optimize the pretrained model to address **overfitting**.\
+            \n - Additional Hyperparameter tuning on the RandomForest Classifier.\
+            \n - Make the project scope more specific to improve interpretability such as focusing on specific sponsors, \
+            enrollment numbers, locations, study topics etc. which would provide more accurate and meaningful results.\
+            \n - Perform Topic Modelling and unsupervised clustering to find additional insights on what groups led to termination.\
+            \n If you have any questions or additional feedback feel free to message me on linkedin: [in/clem-chan](https://www.linkedin.com/in/clem-chan/)')
