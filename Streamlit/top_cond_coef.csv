@@ -1,0 +1,301 @@
+,coefficients
+Condition_end stage,0.16930421338392604
+Condition_crohn disease,0.14156290731920093
+Condition_parkinson,0.10170484577319802
+Condition_19,0.08269390202897532
+Condition_prostate,0.07656379354297882
+Condition_fibrillation,0.06402220369330391
+Condition_macular degeneration,0.06203360031883761
+Condition_cancer,0.059644366679407035
+Condition_sleep apnea,0.05362998922004548
+Condition_cystic fibrosis,0.05293545916328783
+Condition_alzheimer,0.04930423377710634
+Condition_squamous cell,0.04244953996713858
+Condition_prostatic,0.042053012534562055
+Condition_attention deficit,0.040366780682158786
+Condition_infertility,0.03988941585226619
+Condition_osteoarthritis,0.03774855843892618
+Condition_heart failure,0.03669823105614216
+Condition_depressive,0.035414023481477416
+Condition_colorectal,0.03211534053441216
+Condition_myeloid,0.030074172249792804
+Condition_stenosis,0.028942853963384682
+Condition_hepatocellular carcinoma,0.02888003814143727
+Condition_pregnancy,0.02854761161950974
+Condition_arthritis,0.027779512781673805
+Condition_small,0.027609387296220804
+Condition_ulcerative,0.027521282474402452
+Condition_infarction,0.026286747667132432
+Condition_acute,0.024672434182810704
+Condition_pneumonia,0.024588967314599787
+Condition_bipolar,0.023785565273233947
+Condition_distress,0.023516404719495915
+Condition_low,0.02271157751044322
+Condition_lung,0.021672706348934274
+Condition_diabetes mellitus,0.020951987660958522
+Condition_ischemic,0.02088729865633775
+Condition_ulcer,0.02087944084311719
+Condition_pain,0.019720590948992797
+Condition_head neck,0.019030829490193007
+Condition_chronic,0.018419912225293086
+Condition_diabetic,0.017860339978781763
+Condition_schizophrenia,0.01772012344891657
+Condition_coronary,0.01770393907765087
+Condition_multiple sclerosis,0.01769912002140812
+Condition_fracture,0.017503431791983822
+Condition_cell,0.017332825822791866
+Condition_sepsis,0.01728408240200084
+Condition_tumors,0.01717281560945132
+Condition_covid,0.01712139137070185
+Condition_deficit,0.01692730982394132
+Condition_covid19,0.0169086057977446
+Condition_disease,0.0163790747704453
+Condition_alcohol,0.016373341164196555
+Condition_mellitus type,0.016310642922258138
+Condition_venous,0.015882886610251605
+Condition_fractures,0.01578581991038419
+Condition_neoplasms,0.01564239493931684
+Condition_carcinoma,0.015535777157460394
+Condition_stroke,0.015405881039820464
+Condition_hip,0.015202972188618876
+Condition_pain postoperative,0.01517042865543131
+Condition_inflammatory,0.014928321770305425
+Condition_heart,0.014921514493876466
+Condition_brain,0.01462306614188474
+Condition_cognitive,0.014532718847696477
+Condition_syndromes,0.014392958909583066
+Condition_congenital,0.014314827993978383
+Condition_behavior,0.014128717558754668
+Condition_solid tumor,0.01410506978002911
+Condition_malaria,0.013694018456434151
+Condition_traumatic,0.013410077763995578
+Condition_hemorrhage,0.013372753120428316
+Condition_kidney,0.013354348578953979
+Condition_glioblastoma,0.013353675208073148
+Condition_incontinence,0.013049316590592755
+Condition_anesthesia,0.013008584817654855
+Condition_artery,0.012387631285549696
+Condition_abdominal,0.012262818668387411
+Condition_tract,0.011943466307221108
+Condition_complications,0.011863592828335278
+Condition_infection,0.01182058854111035
+Condition_primary,0.011432535309320709
+Condition_head,0.011250312283532717
+Condition_leukemia,0.011237614042223449
+Condition_obesity,0.01119138349498246
+Condition_human,0.01114750512975793
+Condition_breast,0.011034661418875756
+Condition_depression,0.011022691779029039
+Condition_melanoma,0.010956096252509007
+Condition_smoking cessation,0.010457198306414676
+Condition_transplant,0.010386071918802479
+Condition_surgical,0.010339863411674555
+Condition_bladder,0.009993450965318082
+Condition_healthy subjects,0.009935085357555232
+Condition_obstructive pulmonary,0.009875826176218941
+Condition_mild,0.009810691468268804
+Condition_metastatic,0.009790417258489236
+Condition_rheumatoid arthritis,0.009750563781171735
+Condition_sarcoma,0.00973014690710883
+Condition_children,0.009487654619625597
+Condition_cell lung,0.009445229366808017
+Condition_migraine,0.009395932046362812
+Condition_chronic hepatitis,0.009329346498539517
+Condition_rheumatoid,0.009302499346873121
+Condition_atrial,0.008601594563457637
+Condition_anemia,0.008399425791752207
+Condition_refractory,0.008330322019954157
+Condition_systemic,0.008079495178597526
+Condition_liver,0.008040147308423845
+Condition_atopic dermatitis,0.008037379679156912
+Condition_age,0.007724273718316239
+Condition_esophageal,0.007587962282863368
+Condition_stress disorder,0.007329687314703647
+Condition_use,0.007304271509812797
+Condition_multiple myeloma,0.007103031971299082
+Condition_loss,0.007088012933896969
+Condition_induced,0.0069319675115931045
+Condition_hodgkin,0.006631852561551611
+Condition_major,0.0066136118103686005
+Condition_peripheral,0.006543685197623106
+Condition_pancreatic,0.006429490592784478
+Condition_use disorder,0.006072850990456369
+Condition_lymphocytic,0.006053641158156486
+Condition_nervous,0.005977257738390661
+Condition_depressive disorder,0.005732247537311626
+Condition_stage,0.00540347543665231
+Condition_dermatitis,0.005214561154817138
+Condition_adenocarcinoma,0.004845683514206947
+Condition_advanced,0.004785039860064042
+Condition_ovarian,0.004430387161169681
+Condition_disease chronic,0.004402003662594071
+Condition_type diabetes,0.004382335762165148
+Condition_myocardial,0.004361067883925856
+Condition_adult,0.004294440636713927
+Condition_small cell,0.004250798462041395
+Condition_anxiety,0.0041988593032838565
+Condition_cardiac,0.00394470619134838
+Condition_injury,0.0037052030591670317
+Condition_fibrosis,0.0036905638763343974
+Condition_insufficiency,0.0036154762943351165
+Condition_post,0.00359516720446694
+Condition_coronary artery,0.00351588333847347
+Condition_virus,0.003266733892455119
+Condition_resistant,0.0031943833351607675
+Condition_severe,0.0029512891656100354
+Condition_cardiovascular diseases,0.0028520147126469488
+Condition_diseases,0.0027977616854424703
+Condition_renal,0.0026934906119087305
+Condition_postoperative pain,0.0025553693106362273
+Condition_neoplasm,0.0020807336472847588
+Condition_knee,0.002057322672345153
+Condition_injuries,0.0020356674215551655
+Condition_spinal,0.002006213527485341
+Condition_associated,0.0019282079344565704
+Condition_autism,0.0018474789920061546
+Condition_patients,0.0018473225178703126
+Condition_complication,0.0018403407733199545
+Condition_non,0.0018333985482375725
+Condition_bacterial,0.0017289457867963208
+Condition_cerebral,0.0015805113922100968
+Condition_pulmonary,0.0014287693488928789
+Condition_open,0.0011802773705644838
+Condition_dysfunction,0.0011001908112797032
+Condition_arterial,0.00104772953107112
+Condition_copd,0.0010235802727910676
+Condition_blood,0.0008941966711782174
+Condition_cervical,0.0008751181256895778
+Condition_spectrum,0.0008247771023870443
+Condition_healthy volunteers,0.0005676054924290187
+Condition_respiratory,0.0005592058568244973
+Condition_chronic obstructive,0.00046951944165108647
+Condition_metabolic,0.00040617396136694673
+Condition_advanced solid,0.0003436301086396549
+Condition_risk,0.0002947897937637184
+Condition_cord,0.0002555824566833641
+Condition_overweight,0.0002469052666099823
+Condition_cell lymphoma,6.327148630828478e-05
+Condition_tuberculosis,-0.0007278168757942888
+Condition_smoking,-0.0009130593546637768
+Condition_bipolar disorder,-0.0012437038451736041
+Condition_foot,-0.0015689945015083613
+Condition_illness,-0.001957263572854559
+Condition_stress,-0.0020055017489047397
+Condition_transplantation,-0.0020235467357007497
+Condition_pressure,-0.0020318297342860774
+Condition_age related,-0.0022006557543630713
+Condition_malignant,-0.0022895691222520366
+Condition_myeloid leukemia,-0.0023208988742851573
+Condition_colitis,-0.0024024244149796867
+Condition_urinary,-0.002470904682824151
+Condition_obstructive,-0.0026145773359936737
+Condition_solid,-0.0027047662724163186
+Condition_volunteers,-0.002782413664010934
+Condition_solid tumors,-0.003121442599023036
+Condition_syndrome,-0.0031949337946857717
+Condition_brain injury,-0.003264355537271769
+Condition_chronic kidney,-0.0035195384562173135
+Condition_eye,-0.004204668435949996
+Condition_multiple,-0.004236862302468564
+Condition_aortic,-0.004334984413374327
+Condition_diabetes,-0.00511057011598533
+Condition_mellitus,-0.0051220035362437135
+Condition_renal cell,-0.005276087212073188
+Condition_tumor,-0.005320045907587642
+Condition_impairment,-0.0054235133779941555
+Condition_glaucoma,-0.005509222744301778
+Condition_cardiovascular,-0.00553805029080943
+Condition_dry eye,-0.005556108245866228
+Condition_cessation,-0.005581120090396497
+Condition_infections,-0.005595151127560282
+Condition_gastrointestinal,-0.005598264873588776
+Condition_artery disease,-0.005788799721344504
+Condition_atopic,-0.00584578011677097
+Condition_idiopathic,-0.0061424690977934055
+Condition_muscle,-0.006510955607479814
+Condition_drug,-0.006596513317448733
+Condition_surgery,-0.007093082737797072
+Condition_lymphoma,-0.007243040313929142
+Condition_bowel syndrome,-0.007398811948513256
+Condition_childhood,-0.00752046053952554
+Condition_acute myeloid,-0.007591546608865134
+Condition_rhinitis,-0.007642043533372794
+Condition_osteoporosis,-0.008140227488566843
+Condition_gastric,-0.008741706736768814
+Condition_cataract,-0.009379819250149232
+Condition_hepatocellular,-0.00945445508162941
+Condition_cell carcinoma,-0.009612189049879696
+Condition_opioid,-0.009905107233399855
+Condition_care,-0.009956833891789684
+Condition_obstructive sleep,-0.010013005912652698
+Condition_ovarian cancer,-0.010097301626286794
+Condition_pancreatic cancer,-0.01050925190244427
+Condition_dependence,-0.010665606296154173
+Condition_neck cancer,-0.011568454223651862
+Condition_heart disease,-0.011634939239190822
+Condition_bowel,-0.011640295453421979
+Condition_hepatitis,-0.012395215301808577
+Condition_skin,-0.012681898297173562
+Condition_myocardial infarction,-0.012891081648618293
+Condition_osteoarthritis knee,-0.013140788005253298
+Condition_aging,-0.013155659683197577
+Condition_prostate cancer,-0.013327146367088979
+Condition_lung cancer,-0.013441632805773363
+Condition_degeneration,-0.013481737617656624
+Condition_myeloma,-0.013630321989309052
+Condition_asthma,-0.01366647999482775
+Condition_hyperactivity,-0.014270499273741204
+Condition_cerebral palsy,-0.01470941160075568
+Condition_influenza,-0.015501058542671208
+Condition_type,-0.015621425451668648
+Condition_hiv infection,-0.0156984525592887
+Condition_epilepsy,-0.016310183206734764
+Condition_hypercholesterolemia,-0.016317468319497
+Condition_hypertension,-0.016632248568840213
+Condition_deficiency,-0.017663110650302648
+Condition_disorders,-0.018469626717714918
+Condition_sleep,-0.01920163375767403
+Condition_chronic pain,-0.019453902423534557
+Condition_dementia,-0.020614325202029337
+Condition_hiv infections,-0.020681160849420153
+Condition_dry,-0.021412829793487548
+Condition_physical,-0.021535296435073743
+Condition_recurrent,-0.02171407842115336
+Condition_kidney disease,-0.021765429220582107
+Condition_failure,-0.021865030693169175
+Condition_subjects,-0.021900821736620366
+Condition_alzheimer disease,-0.022233373721782943
+Condition_breast cancer,-0.022241737978984294
+Condition_palsy,-0.02306002927526777
+Condition_knee osteoarthritis,-0.023630639421297568
+Condition_health,-0.02438484064006519
+Condition_apnea,-0.024694253055362096
+Condition_central,-0.025033694379389532
+Condition_major depressive,-0.02527201116869542
+Condition_postoperative,-0.02715143367178403
+Condition_hiv,-0.027856807706013224
+Condition_bone,-0.028431756388410077
+Condition_neck,-0.028798404225375215
+Condition_allergic,-0.02882489349181527
+Condition_macular,-0.02994158845779071
+Condition_colorectal cancer,-0.03136979988022755
+Condition_disorder,-0.03183460353926322
+Condition_low pain,-0.032383604651917766
+Condition_non small,-0.03239081700285663
+Condition_sclerosis,-0.03417719871023583
+Condition_attention,-0.03422576723380416
+Condition_spinal cord,-0.03457937038587905
+Condition_immunodeficiency,-0.03473209091306729
+Condition_periodontitis,-0.035497735551806214
+Condition_squamous,-0.03652093357809103
+Condition_psoriasis,-0.038111445372103106
+Condition_dental,-0.040123912624025676
+Condition_pulmonary disease,-0.04145613239244564
+Condition_atrial fibrillation,-0.04167542576584831
+Condition_related,-0.04960115322263124
+Condition_covid 19,-0.06435642112224195
+Condition_healthy,-0.07501032394314562
+Condition_cystic,-0.07684040063513775
+Condition_crohn,-0.11804241152160742
+Condition_parkinson disease,-0.13017599900278243
+Condition_end,-0.18769533208504408
