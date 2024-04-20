@@ -126,7 +126,7 @@ score = output[0]["score"]
 # prediction return
 st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
 
-st.image('.Streamlit/clinicalbert.png')
+# st.image('.Streamlit/clinicalbert.png')
 st.markdown('**What is [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)?**\
             \n - Trained by Emily Alsentzer with over millions of downloads.\
             \n - **HuggingFace Transformer** that was trained on PubMed and MIMIC III dataset.')
