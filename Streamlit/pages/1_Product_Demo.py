@@ -104,7 +104,7 @@ label2id = {"COMPLETED": 0, "TERMINATED": 1}
 
 # Load model
 model = AutoModelForSequenceClassification.from_pretrained(
-    "./Notebooks/models/TransferModel_v2",
+    "clem21chan/clinical_trial_termination",
     num_labels=2,
     id2label=id2label,
     label2id=label2id)
@@ -126,7 +126,7 @@ score = output[0]["score"]
 # prediction return
 st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
 
-st.image('.Streamlit/images/clinicalbert.png')
+st.image('.Streamlit/clinicalbert.png')
 st.markdown('**What is [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)?**\
             \n - Trained by Emily Alsentzer with over millions of downloads.\
             \n - **HuggingFace Transformer** that was trained on PubMed and MIMIC III dataset.')
