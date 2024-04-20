@@ -28,7 +28,7 @@ def load_data(path):
     return df
 
 # Load clean dataframe
-clean_df = load_data('../Notebooks/clean_ctg.csv')
+clean_df = load_data('sample_dataset.csv')
 
 # Display dataframe
 st.header('Peek at the dataset:')
