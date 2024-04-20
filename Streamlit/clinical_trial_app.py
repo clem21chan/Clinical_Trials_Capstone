@@ -22,7 +22,7 @@ st.title('Predicting Clinical Trial Terminations')
 st.markdown('**Author: Clement Chan**')
 st.markdown('---')
 # Header image
-st.image('images/clinical_trial_header.jpg')
+st.image('.Streamlit/images/clinical_trial_header.jpg')
 st.markdown('[Source](https://reverserett.org/site/assets/files/7643/hero-what-it-takes-clinical-trial.1500x700.jpg?2n32co)')
 
 # What are Clinical Trials?

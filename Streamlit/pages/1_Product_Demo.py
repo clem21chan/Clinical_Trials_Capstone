@@ -28,7 +28,7 @@ def load_data(path):
     return df
 
 # Load clean dataframe
-clean_df = load_data('sample_dataset.csv')
+clean_df = load_data('./Streamlit/sample_dataset.csv')
 
 # Display dataframe
 st.header('Peek at the dataset:')
@@ -40,7 +40,7 @@ st.dataframe(clean_df.head(5))
 # manually sort the categories
 st.markdown("## Data Insights")
 st.markdown("### Clinical Trial Termination Based on Enrollment Number")
-graph1 = load_data('enrollment_trial_status.csv')
+graph1 = load_data('./Streamlit/enrollment_trial_status.csv')
 
 # creating the bar graph
 fig1 = px.bar(graph1, orientation='h', color_discrete_sequence=['#f35c6e', '#686ee2'])
@@ -59,7 +59,7 @@ st.markdown('**Insights:**\
 ####### Graph 2: Study Title Coefficients that lead to a terminated trial #######
 st.markdown("### Top 10 Study Condition Coefficients That Lead to a Trial Termination")
 # Load the data
-cond_coef = load_data('top_cond_coef.csv')
+cond_coef = load_data('./Streamlit/top_cond_coef.csv')
 # Clean up the labels
 labels = {
     'Condition_end stage':'end stage',
@@ -104,7 +104,7 @@ label2id = {"COMPLETED": 0, "TERMINATED": 1}
 
 # Load model
 model = AutoModelForSequenceClassification.from_pretrained(
-    "../Notebooks/models/TransferModel_v2",
+    "./Notebooks/models/TransferModel_v2",
     num_labels=2,
     id2label=id2label,
     label2id=label2id)
@@ -126,7 +126,7 @@ score = output[0]["score"]
 # prediction return
 st.write('Classification:', label, ', Confidence_Score:', round(score*100, 1))
 
-st.image('images/clinicalbert.png')
+st.image('.Streamlit/images/clinicalbert.png')
 st.markdown('**What is [BioClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)?**\
             \n - Trained by Emily Alsentzer with over millions of downloads.\
             \n - **HuggingFace Transformer** that was trained on PubMed and MIMIC III dataset.')
