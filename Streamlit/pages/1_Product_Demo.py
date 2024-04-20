@@ -38,15 +38,14 @@ st.dataframe(clean_df.head(5))
 
 ######## Graph 1: Clinical Trial Termination Based on Enrollment Number #######
 # manually sort the categories
-st.markdown("## Data Visualization")
-st.markdown("### Chart 1:")
+st.markdown("## Data Insights")
+st.markdown("### Clinical Trial Termination Based on Enrollment Number")
 graph1 = load_data('enrollment_trial_status.csv')
 
 # creating the bar graph
 fig1 = px.bar(graph1, orientation='h', color_discrete_sequence=['#f35c6e', '#686ee2'])
 
 fig1.update_layout(
-    title="Clinical Trial Termination Based on Enrollment Number",
     xaxis_title="Percentage",
     yaxis_title="Enrollment Number"
 )
@@ -58,7 +57,7 @@ st.markdown('**Insights:**\
             \n - Potential Reasons: High requirements, no interest, lack of funding, etc.')
 
 ####### Graph 2: Study Title Coefficients that lead to a terminated trial #######
-st.markdown("### Chart 2:")
+st.markdown("### Top 10 Study Condition Coefficients That Lead to a Trial Termination")
 # Load the data
 cond_coef = load_data('top_cond_coef.csv')
 # Clean up the labels
@@ -80,7 +79,6 @@ cond_coef = cond_coef.rename(labels)
 fig2 = px.bar(cond_coef.head(10),color_discrete_sequence=['#f35c6e'])
 
 fig2.update_layout(
-    title="Top 10 Study Condition Coefficients That Lead to a Trial Termination",
     yaxis_title="Logistic Regression Coefficient",
     xaxis_title="Study Condition Words",
     showlegend=False
