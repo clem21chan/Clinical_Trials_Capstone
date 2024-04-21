@@ -19,7 +19,10 @@ st.sidebar.success("Select a page above.")
 
 # Page title
 st.title('Predicting Clinical Trial Terminations')
-st.markdown('**Author: Clement Chan**')
+st.markdown('**Author: Clement Chan**\
+           \n - Feel free to explore some of the data insights and the product demo in the navigation bar to your left!\
+           \n - For more information and detailed explanation of the process, solutions, model metrics, etc., check out my github:\
+           [clem21chan](https://github.com/clem21chan/Clinical_Trials_Capstone)')
 st.markdown('---')
 # Header image
 # st.image('.Streamlit/clinical_trial_header.jpg')
