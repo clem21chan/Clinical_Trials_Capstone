@@ -77,7 +77,7 @@ The dataset was retrieved from [ClinicalTrials.gov](https://clinicaltrials.gov/)
 5. **Advanced Modelling:**
     - Ensemble learning (Random Forest)
     - Hyperparameter fine tuning
-    - Word Embedded Transfer Learning
+    - Word Embedded Transfer Learning using BioClinicalBERT
 
 ## 4. Repository Navigation
 
